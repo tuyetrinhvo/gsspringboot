@@ -1,4 +1,4 @@
-package com.cesi;
+package com.cesi.bankonet.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

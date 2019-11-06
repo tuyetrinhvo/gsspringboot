@@ -1,5 +1,6 @@
-package com.cesi;
+package com.cesi.bankonet.repository;
 
+import com.cesi.bankonet.entity.User;
 import org.springframework.data.repository.CrudRepository;
 
 
