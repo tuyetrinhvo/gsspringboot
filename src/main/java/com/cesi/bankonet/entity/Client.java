@@ -18,9 +18,6 @@ public class Client {
 
     private  String prenom;
 
-    private CompteCourant compteCourant;
-
-    private CompteEpargne compteEpargne;
 
     public Integer getId() {
         return id;
@@ -54,28 +51,11 @@ public class Client {
         this.prenom = prenom;
     }
 
-    public CompteCourant getCompteCourant() {
-        return compteCourant;
-    }
 
-    public void setCompteCourant(CompteCourant compteCourant) {
-        this.compteCourant = compteCourant;
-    }
-
-    public CompteEpargne getCompteEpargne() {
-        return compteEpargne;
-    }
-
-    public void setCompteEpargne(CompteEpargne compteEpargne) {
-        this.compteEpargne = compteEpargne;
-    }
-
-    public Client(String i, String n, String p, CompteCourant cc, CompteEpargne ce) {
+    public Client(String i, String n, String p) {
         this.identifiant = i;
         this.nom = n;
         this.prenom = p;
-        this.compteCourant = cc;
-        this.compteEpargne = ce;
     }
 
     public String toString() {
@@ -83,7 +63,8 @@ public class Client {
     }
 
     public double calculerAvoirGlobal() {
-        return this.compteCourant.getSolde() + this.compteEpargne.getSolde();
+
+        return 1.0;
     }
 
 }

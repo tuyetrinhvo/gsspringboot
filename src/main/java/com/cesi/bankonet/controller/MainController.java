@@ -7,13 +7,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
-@RequestMapping(path="/demo")
+@RequestMapping(path="/user")
 public class MainController {
 
     @Autowired
     private UserRepository userRepository;
 
-    @PostMapping(path = "/add")
+    @PostMapping(path = "/user/add")
     public @ResponseBody String addNewUser (@RequestParam String name,
                @RequestParam String email) {
         User n = new User();
@@ -23,7 +23,7 @@ public class MainController {
         return "Saved";
     }
 
-    @GetMapping(path="/all")
+    @GetMapping(path="/user/all")
     public @ResponseBody Iterable<User> getAllUsers() {
 
         return userRepository.findAll();

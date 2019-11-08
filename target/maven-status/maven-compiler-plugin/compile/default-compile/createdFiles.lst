@@ -1,4 +1,11 @@
-com/cesi/MainController.class
-com/cesi/UserRepository.class
+com/cesi/bankonet/repository/CompteCourantRepository.class
+com/cesi/bankonet/entity/User.class
+com/cesi/bankonet/repository/CompteEpargneRepository.class
+com/cesi/bankonet/entity/CompteCourant.class
+com/cesi/bankonet/controller/MainController.class
+com/cesi/bankonet/entity/Client.class
 com/cesi/ApplicationAccessingDatabase.class
-com/cesi/User.class
+com/cesi/bankonet/entity/CompteEpargne.class
+com/cesi/bankonet/repository/UserRepository.class
+com/cesi/bankonet/repository/ClientRepository.class
+com/cesi/bankonet/controller/ClientController.class

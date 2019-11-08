@@ -2,13 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a3dfeae6-4b0e-440e-bfb0-af36a68a053c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cesi/bankonet/entity/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cesi/bankonet/entity/CompteCourant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cesi/bankonet/entity/CompteEpargne.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cesi/bankonet/repository/ClientRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cesi/bankonet/repository/CompteCourant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cesi/bankonet/repository/CompteEpargne.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cesi/bankonet/controller/ClientController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cesi/bankonet/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cesi/bankonet/controller/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cesi/bankonet/entity/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cesi/bankonet/entity/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cesi/bankonet/repository/CompteCourant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cesi/bankonet/repository/CompteCourantRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cesi/bankonet/repository/CompteEpargne.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cesi/bankonet/repository/CompteEpargneRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cesi/MainController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cesi/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cesi/UserRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/gs-spring-boot-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/gs-spring-boot-1.0-SNAPSHOT.jar.original" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,8 +28,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -124,6 +133,8 @@
       <workItem from="1573032123131" duration="6006000" />
       <workItem from="1573045628516" duration="4009000" />
       <workItem from="1573050316597" duration="2819000" />
+      <workItem from="1573114022710" duration="597000" />
+      <workItem from="1573200704697" duration="3468000" />
     </task>
     <servers />
   </component>
