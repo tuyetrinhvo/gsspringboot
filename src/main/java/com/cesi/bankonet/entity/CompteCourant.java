@@ -59,6 +59,7 @@ public class CompteCourant {
         this.intitule = intitule;
     }
 
+    public CompteCourant(){}
     public CompteCourant(String n, String i, double s, double m) {
         this.numero = n;
         this.intitule = i;
