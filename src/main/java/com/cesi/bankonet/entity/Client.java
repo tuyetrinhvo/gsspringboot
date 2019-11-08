@@ -51,7 +51,7 @@ public class Client {
         this.prenom = prenom;
     }
 
-
+    public Client(){}
     public Client(String i, String n, String p) {
         this.identifiant = i;
         this.nom = n;
