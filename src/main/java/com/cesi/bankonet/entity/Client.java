@@ -58,8 +58,10 @@ public class Client {
         this.prenom = p;
     }
 
+    @Override
     public String toString() {
-        return "test";
+
+        return "Client [identifiant=" + identifiant + ", Nom=" + nom + ", Prénom=" + prenom + "]";
     }
 
     public double calculerAvoirGlobal() {
