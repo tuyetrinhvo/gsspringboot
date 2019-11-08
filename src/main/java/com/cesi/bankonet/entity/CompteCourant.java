@@ -1,9 +1,7 @@
 package com.cesi.bankonet.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+
 
 @Entity
 public class CompteCourant {
@@ -14,6 +12,10 @@ public class CompteCourant {
     private String numero;
 
     private String intitule;
+
+    @ManyToOne
+    @JoinColumn
+    private Client client;
 
     private double solde;
 
@@ -57,6 +59,14 @@ public class CompteCourant {
 
     public void setIntitule(String intitule) {
         this.intitule = intitule;
+    }
+
+    public Client getClient() {
+        return client;
+    }
+
+    public void setClient(Client client) {
+        this.client = client;
     }
 
     public CompteCourant(){}

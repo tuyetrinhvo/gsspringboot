@@ -1,9 +1,9 @@
 package com.cesi.bankonet.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.Set;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 @Entity
 public class Client {
@@ -18,6 +18,8 @@ public class Client {
 
     private  String prenom;
 
+    @OneToMany(mappedBy = "client", cascade = CascadeType.ALL)
+    private Set<CompteCourant> compteCourants;
 
     public Integer getId() {
         return id;
@@ -52,10 +54,12 @@ public class Client {
     }
 
     public Client(){}
-    public Client(String i, String n, String p) {
+    private Client(String i, String n, String p, CompteCourant compteCourants) {
         this.identifiant = i;
         this.nom = n;
         this.prenom = p;
+        this.compteCourants = Stream.of(compteCourants).collect(Collectors.toSet());
+        this.compteCourants.forEach(x -> x.setClient(this));
     }
 
     @Override

@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a3dfeae6-4b0e-440e-bfb0-af36a68a053c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cesi/bankonet/controller/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cesi/bankonet/controller/ClientController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cesi/bankonet/entity/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cesi/bankonet/entity/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cesi/bankonet/repository/ClientRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cesi/bankonet/repository/ClientRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cesi/bankonet/entity/CompteCourant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cesi/bankonet/entity/CompteCourant.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -158,7 +157,7 @@
       <workItem from="1573050316597" duration="2819000" />
       <workItem from="1573114022710" duration="597000" />
       <workItem from="1573200704697" duration="13969000" />
-      <workItem from="1573220346576" duration="3418000" />
+      <workItem from="1573220346576" duration="4971000" />
     </task>
     <servers />
   </component>
