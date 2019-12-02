@@ -4,7 +4,10 @@ import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.LinkedHashSet;
+import java.util.List;
 import java.util.Set;
+import java.util.TreeSet;
 
 @Entity
 public class Client implements Serializable {
@@ -21,11 +24,11 @@ public class Client implements Serializable {
 
     @JsonManagedReference
     @OneToMany(mappedBy = "client", cascade = CascadeType.ALL)
-    private Set<CompteCourant> compteCourants;
+    private List<CompteCourant> compteCourants;
 
     @JsonManagedReference
-    @OneToOne(mappedBy = "client", cascade = CascadeType.ALL)
-    private CompteEpargne compteEpargne;
+    @OneToMany(mappedBy = "client", cascade = CascadeType.ALL)
+    private List<CompteEpargne> compteEpargnes;
 
     public Integer getId() {
         return id;
@@ -59,20 +62,20 @@ public class Client implements Serializable {
         this.prenom = prenom;
     }
 
-    public Set<CompteCourant> getCompteCourants() {
+    public List<CompteCourant> getCompteCourants() {
         return compteCourants;
     }
 
-    public void setCompteCourants(Set<CompteCourant> compteCourants) {
+    public void setCompteCourants(List<CompteCourant> compteCourants) {
         this.compteCourants = compteCourants;
     }
 
-    public CompteEpargne getCompteEpargne() {
-        return compteEpargne;
+    public List<CompteEpargne> getCompteEpargnes() {
+        return compteEpargnes;
     }
 
-    public void setCompteEpargne(CompteEpargne compteEpargne) {
-        this.compteEpargne = compteEpargne;
+    public void setCompteEpargnes(List<CompteEpargne> compteEpargnes) {
+        this.compteEpargnes = compteEpargnes;
     }
 
     public Client(){}

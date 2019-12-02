@@ -20,7 +20,7 @@ public class CompteEpargne {
     private double tauxInteret;
 
     @JsonBackReference
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "client_id")
     private Client client;
 
