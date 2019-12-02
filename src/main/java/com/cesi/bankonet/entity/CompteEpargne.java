@@ -5,56 +5,9 @@ import com.fasterxml.jackson.annotation.JsonBackReference;
 import javax.persistence.*;
 
 @Entity
-public class CompteEpargne {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
-
-    private String numero;
-
-    private String intitule;
-
-    private double solde;
+public class CompteEpargne extends Compte{
 
     private double tauxInteret;
-
-    @JsonBackReference
-    @ManyToOne
-    @JoinColumn(name = "client_id")
-    private Client client;
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getNumero() {
-        return numero;
-    }
-
-    public void setNumero(String numero) {
-        this.numero = numero;
-    }
-
-    public String getIntitule() {
-        return intitule;
-    }
-
-    public void setIntitule(String intitule) {
-        this.intitule = intitule;
-    }
-
-    public double getSolde() {
-        return solde;
-    }
-
-    public void setSolde(double solde) {
-        this.solde = solde;
-    }
 
     public double getTauxInteret() {
         return tauxInteret;
@@ -62,14 +15,6 @@ public class CompteEpargne {
 
     public void setTauxInteret(double tauxInteret) {
         this.tauxInteret = tauxInteret;
-    }
-
-    public Client getClient() {
-        return client;
-    }
-
-    public void setClient(Client client) {
-        this.client = client;
     }
 
     public CompteEpargne(){}
@@ -81,7 +26,6 @@ public class CompteEpargne {
     }
 
     public String toString() {
-
         return "test";
     }
 

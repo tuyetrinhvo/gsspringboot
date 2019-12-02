@@ -1,5 +1,7 @@
+com/cesi/bankonet/controller/CompteEpargneController.class
 com/cesi/bankonet/entity/CompteCourant.class
 com/cesi/bankonet/controller/MainController.class
+com/cesi/bankonet/entity/Compte.class
 com/cesi/bankonet/repository/CompteCourantRepository.class
 com/cesi/bankonet/entity/User.class
 com/cesi/bankonet/repository/CompteEpargneRepository.class

@@ -6,47 +6,10 @@ import javax.persistence.*;
 
 
 @Entity
-public class CompteCourant {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
+public class CompteCourant extends Compte{
 
-    private String numero;
-
-    private String intitule;
-
-    @JsonBackReference
-    @ManyToOne
-    @JoinColumn(name = "client_id")
-    private Client client;
-
-    private double solde;
-
+    @Column(name ="montant_decouvert_autorise")
     private double montantDecouvertAutorise;
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getNumero() {
-        return numero;
-    }
-
-    public void setNumero(String numero) {
-        this.numero = numero;
-    }
-
-    public double getSolde() {
-        return solde;
-    }
-
-    public void setSolde(double solde) {
-        this.solde = solde;
-    }
 
     public double getMontantDecouvertAutorise() {
         return montantDecouvertAutorise;
@@ -54,22 +17,6 @@ public class CompteCourant {
 
     public void setMontantDecouvertAutorise(double montantDecouvertAutorise) {
         this.montantDecouvertAutorise = montantDecouvertAutorise;
-    }
-
-    public String getIntitule() {
-        return intitule;
-    }
-
-    public void setIntitule(String intitule) {
-        this.intitule = intitule;
-    }
-
-    public Client getClient() {
-        return client;
-    }
-
-    public void setClient(Client client) {
-        this.client = client;
     }
 
     public CompteCourant(){}

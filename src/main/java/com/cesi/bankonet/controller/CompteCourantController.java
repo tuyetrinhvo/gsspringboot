@@ -1,24 +1,33 @@
 package com.cesi.bankonet.controller;
 
+import com.cesi.bankonet.entity.Client;
 import com.cesi.bankonet.entity.CompteCourant;
 import com.cesi.bankonet.repository.CompteCourantRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
-@RequestMapping(path = "/client")
+@RequestMapping(path = "/compteCourant")
 public class CompteCourantController {
 
     @Autowired
-    private CompteCourantRepository repository;
+    private CompteCourantRepository ccRepository;
 
-    @PostMapping(path = "/compteCourant")
+    @PostMapping(path = "/create")
     public CompteCourant createNewCompteCourant(@RequestBody CompteCourant newCc) {
-        return repository.save(newCc);
+        return ccRepository.save(newCc);
     }
 
-    @GetMapping(path="/compteCourant/{id}")
+    @GetMapping(path="/get/{id}")
     public CompteCourant getCompteCourant(@PathVariable Integer id) {
-        return repository.findById(id).get();
+        return ccRepository.findById(id).get();
     }
+
+    @GetMapping(path="/all")
+    public List<CompteCourant> getAllComptes() {
+        return ccRepository.findAll();
+    }
+
 }
