@@ -15,8 +15,9 @@ public class CompteCourant {
 
     private String intitule;
 
-    @OneToOne
     @JsonBackReference
+    @ManyToOne
+    @JoinColumn(name = "client_id")
     private Client client;
 
     private double solde;

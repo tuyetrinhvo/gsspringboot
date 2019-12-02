@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Set;
 
 @Entity
 public class Client implements Serializable {
@@ -19,8 +20,8 @@ public class Client implements Serializable {
     private  String prenom;
 
     @JsonManagedReference
-    @OneToOne(mappedBy = "client")
-    private CompteCourant compteCourant;
+    @OneToMany(mappedBy = "client", cascade = CascadeType.ALL)
+    private Set<CompteCourant> compteCourants;
 
     public Integer getId() {
         return id;
@@ -61,12 +62,12 @@ public class Client implements Serializable {
         this.prenom = p;
     }
 
-    public CompteCourant getCompteCourant() {
-        return compteCourant;
+    public Set<CompteCourant> getCompteCourants() {
+        return compteCourants;
     }
 
-    public void setCompteCourant(CompteCourant compteCourant) {
-        this.compteCourant = compteCourant;
+    public void setCompteCourants(Set<CompteCourant> compteCourants) {
+        this.compteCourants = compteCourants;
     }
 
     @Override
