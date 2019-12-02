@@ -1,9 +1,8 @@
 package com.cesi.bankonet.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
+import javax.persistence.*;
 
 @Entity
 public class CompteEpargne {
@@ -19,6 +18,11 @@ public class CompteEpargne {
     private double solde;
 
     private double tauxInteret;
+
+    @JsonBackReference
+    @OneToOne
+    @JoinColumn(name = "client_id")
+    private Client client;
 
     public Integer getId() {
         return id;
@@ -58,6 +62,14 @@ public class CompteEpargne {
 
     public void setTauxInteret(double tauxInteret) {
         this.tauxInteret = tauxInteret;
+    }
+
+    public Client getClient() {
+        return client;
+    }
+
+    public void setClient(Client client) {
+        this.client = client;
     }
 
     public CompteEpargne(){}

@@ -23,6 +23,10 @@ public class Client implements Serializable {
     @OneToMany(mappedBy = "client", cascade = CascadeType.ALL)
     private Set<CompteCourant> compteCourants;
 
+    @JsonManagedReference
+    @OneToOne(mappedBy = "client", cascade = CascadeType.ALL)
+    private CompteEpargne compteEpargne;
+
     public Integer getId() {
         return id;
     }
@@ -55,19 +59,27 @@ public class Client implements Serializable {
         this.prenom = prenom;
     }
 
-    public Client(){}
-    public Client(String i, String n, String p) {
-        this.identifiant = i;
-        this.nom = n;
-        this.prenom = p;
-    }
-
     public Set<CompteCourant> getCompteCourants() {
         return compteCourants;
     }
 
     public void setCompteCourants(Set<CompteCourant> compteCourants) {
         this.compteCourants = compteCourants;
+    }
+
+    public CompteEpargne getCompteEpargne() {
+        return compteEpargne;
+    }
+
+    public void setCompteEpargne(CompteEpargne compteEpargne) {
+        this.compteEpargne = compteEpargne;
+    }
+
+    public Client(){}
+    public Client(String i, String n, String p) {
+        this.identifiant = i;
+        this.nom = n;
+        this.prenom = p;
     }
 
     @Override
