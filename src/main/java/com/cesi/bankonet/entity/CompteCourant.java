@@ -1,5 +1,7 @@
 package com.cesi.bankonet.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import javax.persistence.*;
 
 
@@ -13,8 +15,8 @@ public class CompteCourant {
 
     private String intitule;
 
-    @ManyToOne
-    @JoinColumn
+    @OneToOne
+    @JsonBackReference
     private Client client;
 
     private double solde;

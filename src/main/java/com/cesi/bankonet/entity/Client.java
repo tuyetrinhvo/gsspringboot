@@ -1,12 +1,12 @@
 package com.cesi.bankonet.entity;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import javax.persistence.*;
-import java.util.Set;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
+import java.io.Serializable;
 
 @Entity
-public class Client {
+public class Client implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -18,8 +18,9 @@ public class Client {
 
     private  String prenom;
 
-    @OneToMany(mappedBy = "client", cascade = CascadeType.ALL)
-    private Set<CompteCourant> compteCourants;
+    @JsonManagedReference
+    @OneToOne(mappedBy = "client")
+    private CompteCourant compteCourant;
 
     public Integer getId() {
         return id;
@@ -54,12 +55,18 @@ public class Client {
     }
 
     public Client(){}
-    private Client(String i, String n, String p, CompteCourant compteCourants) {
+    public Client(String i, String n, String p) {
         this.identifiant = i;
         this.nom = n;
         this.prenom = p;
-        this.compteCourants = Stream.of(compteCourants).collect(Collectors.toSet());
-        this.compteCourants.forEach(x -> x.setClient(this));
+    }
+
+    public CompteCourant getCompteCourant() {
+        return compteCourant;
+    }
+
+    public void setCompteCourant(CompteCourant compteCourant) {
+        this.compteCourant = compteCourant;
     }
 
     @Override
