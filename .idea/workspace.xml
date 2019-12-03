@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a3dfeae6-4b0e-440e-bfb0-af36a68a053c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cesi/bankonet/controller/CompteEpargneController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cesi/bankonet/entity/Compte.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cesi/bankonet/controller/CompteCourantController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cesi/bankonet/controller/CompteCourantController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cesi/bankonet/entity/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cesi/bankonet/entity/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cesi/bankonet/entity/CompteCourant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cesi/bankonet/entity/CompteCourant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cesi/bankonet/entity/CompteEpargne.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cesi/bankonet/entity/CompteEpargne.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cesi/bankonet/repository/CompteEpargneRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cesi/bankonet/repository/CompteEpargneRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cesi/bankonet/controller/CompteEpargneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cesi/bankonet/controller/CompteEpargneController.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -170,6 +164,8 @@
       <workItem from="1575281631463" duration="3075000" />
       <workItem from="1575290981268" duration="3587000" />
       <workItem from="1575295452245" duration="9454000" />
+      <workItem from="1575360467424" duration="1294000" />
+      <workItem from="1575362341095" duration="2419000" />
     </task>
     <servers />
   </component>

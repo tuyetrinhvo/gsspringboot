@@ -30,4 +30,25 @@ public class CompteCourantController {
         return ccRepository.findAll();
     }
 
+    @PutMapping(path = "/update/{id}")
+    public CompteCourant updateCompte(@RequestBody CompteCourant newCompte, @PathVariable Integer id) {
+        return ccRepository.findById(id).map(
+                compte -> {
+                    compte.setNumero(newCompte.getNumero());
+                    compte.setIntitule(newCompte.getIntitule());
+                    compte.setSolde(newCompte.getSolde());
+                    compte.setMontantDecouvertAutorise(newCompte.getMontantDecouvertAutorise());
+                    compte.setClient(newCompte.getClient());
+                    return ccRepository.save(compte);
+                }).orElseGet(() -> {
+            newCompte.setId(id);
+            return ccRepository.save(newCompte);
+        });
+    }
+
+    @DeleteMapping("/delete/{id}")
+    public void deleteCompte(@PathVariable Integer id) {
+        ccRepository.deleteById(id);
+    }
+
 }
