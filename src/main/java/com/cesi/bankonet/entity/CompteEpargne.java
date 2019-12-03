@@ -1,7 +1,5 @@
 package com.cesi.bankonet.entity;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
-
 import javax.persistence.*;
 
 @Entity

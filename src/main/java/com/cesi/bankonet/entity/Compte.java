@@ -3,9 +3,10 @@ package com.cesi.bankonet.entity;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @MappedSuperclass
-public abstract class Compte {
+public abstract class Compte implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -18,7 +19,7 @@ public abstract class Compte {
     protected double solde;
 
     @JsonBackReference
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "client_id")
     protected Client client;
 

@@ -20,11 +20,11 @@ public class Client implements Serializable {
     private  String prenom;
 
     @JsonManagedReference
-    @OneToMany(mappedBy = "client", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "client", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<CompteCourant> compteCourants = new ArrayList<>();
 
     @JsonManagedReference
-    @OneToMany(mappedBy = "client", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "client", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<CompteEpargne> compteEpargnes = new ArrayList<>();
 
     public Integer getId() {

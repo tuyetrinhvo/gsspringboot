@@ -1,6 +1,5 @@
 package com.cesi.bankonet.controller;
 
-import com.cesi.bankonet.entity.Client;
 import com.cesi.bankonet.entity.CompteCourant;
 import com.cesi.bankonet.repository.CompteCourantRepository;
 import org.springframework.beans.factory.annotation.Autowired;
