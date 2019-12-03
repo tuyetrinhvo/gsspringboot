@@ -1,5 +1,8 @@
 # Intellij
-
+.idea/
+.idea/workspace.xml
+*.iml
+*.iws
 
 # Maven
 log/
